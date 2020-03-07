@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm Bài Tập về Biến Kiểu Dữ Liệu Và Toán Tử</title>
+</head>
+<body>
+   <script>
+       let inputly;
+       let inputhoa;
+       let inputsinh;
+       inputly=prompt("Mời Bạn Nhập Vào Điểm Lý:");
+       inputhoa=prompt("Mời Bạn Nhập Vào Điểm Hóa:");
+       inputsinh=prompt("Mời Bạn Nhập Vào Điểm Sinh:");
+       let ly=parseFloat(inputly);
+       let hoa=parseFloat(inputhoa);
+       let sinh=parseFloat(inputsinh);
+       let tb=(ly+hoa+sinh)/3;
+       let t=ly+hoa+sinh;
+       document.write("Tổng Điểm Bạn Vừa Nhập Là:"+t);
+       document.write("<br/>");
+       document.write("Điểm Trung Bình Bạn Vừa Nhập Là:"+tb);
+   </script>
+</body>
+</html>
