@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm Ứng Dụng Máy Tính</title>
+</head>
+<body>
+   <form>
+       <h2>Caculator</h2>
+       <input type="number" id="number" name="number">
+       <input type="number2" value="number2" name="number2">
+       <button type="button" onclick="add">Addition(+)</button>
+       <button type="button" onclick="sub">Subtraction(-)</button>
+       <button type="button" onclick="mul">Multiplication(+)</button>
+       <button type="button" onclick="div">Division(+)</button>
+       <span id="demo"></span>
+   </form>
+    <script>
+        var x=document.getElementById("number").value;
+        function add() {
+            var x=document.getElementById("number").value;
+            document.getElementById("demo").innerHTML=x;
+        }
+    </script>
+</body>
+</html>
