@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực Hành Sự Kiện Với Bàn Phím</title>
+</head>
+<body onload="themSuKien()">
+    <img src="https://freepngimg.com/thumb/artwork/93004-shizuka-nobi-yellow-minamoto-sewashi-facial-expression.png" style="position: absolute;left: 0;top: 0;" id="nobita" width="100px" height="100px">
+    <script>
+        function diLen() {
+            let input = document.getElementById("nobita");
+            input.style.top=parseInt(input.style.top)- 5 +'px';
+        }
+        function diXuong() {
+            let input = document.getElementById("nobita");
+            input.style.top=parseInt(input.style.top)+ 5 +'px';
+        }function diTrai() {
+            let input = document.getElementById("nobita");
+            input.style.left=parseInt(input.style.left)- 5 +'px';
+        }function diPhai() {
+            let input = document.getElementById("nobita");
+            input.style.left=parseInt(input.style.left)+ 5 +'px';
+        }
+        function ganBanPhim(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    diTrai();
+                    break;
+                case 39:
+                    diPhai();
+                    break;
+                case 38:
+                    diLen();
+                    break
+                case 40:
+                    diXuong();
+                    break;
+            }
+        }
+        function themSuKien() {
+            window.addEventListener('keydown', ganBanPhim);
+        }
+    </script>
+</body>
+</html>
