@@ -8,23 +8,43 @@
    <form>
        <h2>Chuyển Đổi Tiền Tệ</h2>
        <p>Amount</p>
-       <input type="number"name="number"/>
+       <input type="number"name="number" id="number"/>
        <p>From Currency</p>
-       <select>
-           <option name="VND" value="VND">VND</option>
-           <option name="USD" value="USD">USD</option>
+       <select id="fromCurrency">
+           <option  value="VND">VND</option>
+           <option value="USD">USD</option>
        </select>
        <p>To Currency</p>
-       <select id="c1">
-           <option name="USD" value="USD">USD</option>
-           <option name="USD" value="VND">VND</option>
+       <select id="toCurrency">
+           <option value="USD">USD</option>
+           <option value="VND">VND</option>
        </select>
        <button type="button" onclick="swap()">Check</button>
+       Hiển Thị:
+       <p id="hienthi"></p>
    </form>
    <script>
        function swap() {
-           let s = parseFloat(name.number);
-           if(document.getElementById(c1) )
+           let VND=1;
+           let USD=23000;
+           let result =0;
+           let input =parseInt(document.getElementById("number").value);
+           if(document.getElementById("fromCurrency").value ==='VND' && document.getElementById("toCurrency").value ==='VND'){
+               result=VND/VND;
+               document.getElementById("hienthi").innerHTML=result.toFixed(2);
+           }
+           if(document.getElementById("fromCurrency").value ==='VND' && document.getElementById("toCurrency").value ==='USD'){
+               result=VND/USD;
+               document.getElementById("hienthi").innerHTML=result.toFixed(2);
+           }
+           if(document.getElementById("fromCurrency").value ==='USD' && document.getElementById("toCurrency").value ==='VND'){
+               result=USD*input;
+               document.getElementById("hienthi").innerHTML=result.toFixed(2);
+           }
+           if(document.getElementById("fromCurrency").value ==='USD' && document.getElementById("toCurrency").value ==='USD'){
+               result=USD/USD;
+               document.getElementById("hienthi").innerHTML=result.toFixed(2);
+           }
        }
    </script>
 </body>
