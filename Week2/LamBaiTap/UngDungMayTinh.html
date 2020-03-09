@@ -8,19 +8,20 @@
    <form>
        <h2>Caculator</h2>
        <input type="number" id="number" name="number">
-       <input type="number2" value="number2" name="number2">
-       <button type="button" onclick="add">Addition(+)</button>
+       <input type="number" id="number2" name="number2">
+       <button type="button" onclick="add">Adc</button>
        <button type="button" onclick="sub">Subtraction(-)</button>
-       <button type="button" onclick="mul">Multiplication(+)</button>
-       <button type="button" onclick="div">Division(+)</button>
+       <button type="button" onclick="mul">Multiplication(*)</button>
+       <button type="button" onclick="div">Division(/)</button>
        <span id="demo"></span>
    </form>
     <script>
-        var x=document.getElementById("number").value;
-        function add() {
-            var x=document.getElementById("number").value;
-            document.getElementById("demo").innerHTML=x;
-        }
+     function  add() {
+         let x= parseInt(document.getElementById('number'));
+         let y= parseInt(document.getElementById('number2'));
+         let t=x+y;
+         document.write("Hiển Thị x nào : "+ t);
+     }
     </script>
 </body>
 </html>
